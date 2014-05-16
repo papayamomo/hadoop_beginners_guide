@@ -36,7 +36,7 @@ public class WordCount3 {
 				Context context) throws IOException, InterruptedException {
 			int total = 0;
 			for (IntWritable val : values) {
-				total += val.get();
+				total += val.get(); // plus the value
 			}
 			context.write(key, new IntWritable(total));
 		}
